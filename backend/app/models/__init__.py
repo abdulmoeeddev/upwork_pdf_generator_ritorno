@@ -3,7 +3,7 @@ from mongoengine import connect, disconnect
 def initialize_db(app):
     """Initialize MongoEngine connection using MongoDB URI."""
     uri = app.config.get("MONGODB_URI")
-
+    print(uri)
     if not uri:
         raise ValueError("⚠️ MONGODB_URI is not set in app config")
 

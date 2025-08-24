@@ -24,10 +24,10 @@ export const bdAPI = {
 };
 
 export const documentsAPI = {
-  previewProposal: (proposalId) => axios.get(`${API_BASE_URL}/documents/proposals/${proposalId}/preview`, {
+  previewProposal: (proposalId) => axios.get(`${API_BASE_URL}/documents/proposals/${proposalId}/preview/pdf`, {
     responseType: 'blob'
   }),
-  downloadProposal: (proposalId) => axios.get(`${API_BASE_URL}/documents/proposals/${proposalId}/download`, {
+  downloadProposal: (proposalId) => axios.get(`${API_BASE_URL}/documents/proposals/${proposalId}/download/pdf`, {
     responseType: 'blob'
   })
 };

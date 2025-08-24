@@ -38,3 +38,4 @@ next-env.d.ts
 frontend/node_modules
 backend/venv
 .env
+backend/.env
