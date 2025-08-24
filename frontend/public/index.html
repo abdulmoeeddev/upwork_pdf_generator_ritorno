@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#AD2831" />
+    <meta
+      name="description"
+      content="Upwork Proposal Generator - Create professional proposals with AI assistance"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Upwork Proposal Generator</title>
+    
+    <style>
+      /* Initial loading styles */
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #121212;
+        color: #ffffff;
+      }
+      
+      /* Loading animation */
+      .loading-spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: #AD2831;
+        animation: spin 1s ease-in-out infinite;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      
+      /* Ensure proper box sizing */
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding: 20px; text-align: center; background-color: #1E1E1E; color: white;">
+        <h2>JavaScript Required</h2>
+        <p>You need to enable JavaScript to run this application.</p>
+      </div>
+    </noscript>
+    
+    <div id="root">
+      <!-- Loading screen -->
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #121212;">
+        <div style="text-align: center;">
+          <div class="loading-spinner" style="margin-bottom: 20px;"></div>
+          <p style="color: #AD2831; font-weight: 500;">Loading Upwork Proposal Generator...</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Additional script for environment variables if needed -->
+    <script>
+      // Global configuration can be set here
+      window.APP_CONFIG = {
+        API_BASE_URL: process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000',
+        ENVIRONMENT: process.env.NODE_ENV || 'development'
+      };
+    </script>
+  </body>
+</html>
