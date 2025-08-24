@@ -1,9 +1,11 @@
 import os
 from datetime import timedelta
+from dotenv import load_dotenv
 
 class Config:
     # Flask
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'dev-secret-key-change-in-production'
+    load_dotenv()
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'Shusnain@123'
     
     # MongoDB
     MONGODB_URI = os.environ.get('MONGODB_URI') or 'mongodb://localhost:27017/upwork_proposal_generator'
